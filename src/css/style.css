@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+h1 {
+  margin: 30px;
+}
+
+.containers {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: #107abb;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.container h3 {
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+.container-drop {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 5px;
+  flex-grow: 1;
+  background-color: #E9E9E9;
+}
+.isempty {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  display: none;
+}
+.card {
+  background-color: #F9F9F9;
+  border-radius: 5px;
+  padding: 15px 10px;
+  position: relative;
+}
+
+.card-close {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  padding: 5px 8px;
+  background-color: #fff;
+  line-height: 0.5;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+  color: red;
+  display: none;
+}
+
+.add-form {
+  display: none;
+}
+
+.add-form input {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.btn-form {
+  margin: 10px 10px 0 0;
+}
+.add-form-submit {
+  padding: 10px 15px;
+  background-color: #5ca84d;
+  color: #fff;
+}
+.add-form-reset {
+  margin-top: 5px;
+  padding: 5px 8px;
+  background-color: #fff;
+  line-height: 0.5;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
+  color: red;
+}
+.add-link {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  margin: 10px 0;
+}
+.add-link .fa-plus {
+  margin-right: 10px;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.dragged {
+  border-radius: 10px;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  background: #fff;
+}
+
+.fantom {
+  background-color: #107abb;
+  opacity: 0.4;
+  border: 1px solid #fff;
+}
