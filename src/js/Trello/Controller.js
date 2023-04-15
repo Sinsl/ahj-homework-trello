@@ -26,13 +26,9 @@ export default class Controller {
   }
 
   addCards() {
-    if (this.storage.lenght === 0) {
-      this.addDefaultCard();
-    } else {
-      this.addStoreCard();
-    }
-    // (this.storage.length > 0) ? console.log('stor true') : console.log('store default');
-    // this.storage.length > 0 ? this.addStoreCard() : this.addDefaultCard();
+    Object.entries(this.storage.store).length === 0
+      ? this.addDefaultCard()
+      : this.addStoreCard();
   }
 
   addStoreCard() {

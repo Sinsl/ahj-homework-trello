@@ -5,17 +5,12 @@ export default class Storage {
     this.registerEvents();
   }
 
-  get lenght() {
-    return localStorage.length;
-  }
-
   start() {
     this.getStorage();
   }
 
   registerEvents() {
     window.addEventListener('beforeunload', this.setStorage.bind(this));
-    window.addEventListener('DOMContentLoaded', this.getStorage.bind(this));
   }
 
   setStorage() {
@@ -30,16 +25,11 @@ export default class Storage {
         arrCardObj.push({ text: elem.textContent, id: elem.dataset.id });
       });
       this.store[item.title] = arrCardObj;
-      localStorage.setItem(item.title, JSON.stringify(this.store[item.title]));
     });
+    localStorage.setItem('store', JSON.stringify(this.store));
   }
 
   getStorage() {
-    for (let key in localStorage) {
-      // eslint-disable-next-line no-prototype-builtins
-      if (localStorage.hasOwnProperty(key)) {
-        this.store[key] = JSON.parse(localStorage.getItem(key));
-      }
-    }
+    this.store = JSON.parse(localStorage.getItem('store')) || {};
   }
 }
